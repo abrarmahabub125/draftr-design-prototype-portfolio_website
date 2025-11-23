@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Draftr Design & prototype</title>
+  <!-- Importing font-awesome icon  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <!-- Importing AOS Animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Add tailwindcss framework -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!-- Adding local stylesheet -->
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="shortcut icon"
+    href="https://framerusercontent.com/images/zihHvrScDvGkIjPol8V3xIlAkkE.svg?width=100&height=100"
+    type="image/x-icon" />
+
+  <!-- load tailwind css throw cdn -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body>
+  <!-- Header section start  -->
+  <header id="header"
+    class="fixed left-0 top-0 z-50 w-full bg-white lg:flex lg:justify-center lg:items-center transition-transform duration-300 ease">
+    <div class="flex justify-between md:justify-around items-center px-3 md:px-10 py-2 lg:max-w-[1200px] lg:w-full">
+      <!-- header logo  -->
+      <div data-aos="fade-right">
+        <a href="index.html">
+          <img class="w-24 md:w-32" src="https://framerusercontent.com/images/wXnyZRIxNTskCYfZxaUW8sl0bo.svg"
+            alt="logo" />
+        </a>
+      </div>
+      <!-- navigation menu -->
+      <nav id="navigation" data-aos="fade-up"
+        class="absolute -top-60 left-0 z-10 md:z-auto md:static md:top-auto w-full bg-white md:bg-transparent md:flex md:justify-center md:items-center transition-all duration-300 ease-in-out">
+        <ul class="p-4 flex flex-col md:flex-row gap-2 md:gap-5">
+          <li>
+            <a href="#"
+              class="text-sm md:text-base font-medium text-[#606266] transition-colors hover:text-[#101011] focus:text-[#101011]">About</a>
+          </li>
+          <li>
+            <a href="#"
+              class="text-sm md:text-base font-medium text-[#606266] transition-colors hover:text-[#101011] focus:text-[#101011]">Blog</a>
+          </li>
+          <li>
+            <a href="#"
+              class="text-sm md:text-base font-medium text-[#606266] transition-colors hover:text-[#101011] focus:text-[#101011]">Waitlist</a>
+          </li>
+          <li>
+            <a href="#"
+              class="text-sm md:text-base font-medium text-[#606266] transition-colors hover:text-[#101011] focus:text-[#101011]">Changelog</a>
+          </li>
+          <li>
+            <a href="#"
+              class="text-sm md:text-base font-medium text-[#606266] transition-colors hover:text-[#101011] focus:text-[#101011]">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <button data-aos="fade-left"
+        class="relative hidden md:block h-8 md:h-10 w-28 md:w-36 md:mr-20 bg-black text-white rounded-full group">
+
+        <!-- First text (default visible) -->
+        <span class="text-sm font-medium absolute inset-0 flex items-center justify-center
+          transition-all duration-300 group-hover:-translate-y-5 group-hover:opacity-0">
+          Login now
+        </span>
+
+        <!-- Second text (hidden, comes from bottom on hover) -->
+        <span class="text-sm font-medium absolute inset-0 flex items-center justify-center
+          translate-y-5 opacity-0 transition-all duration-300
+          group-hover:translate-y-0 group-hover:opacity-100">
+          Login now
+        </span>
+
+      </button>
+
+
+      <!-- mobile menu hambarger  -->
+      <button data-aos="fade-left" data="close" id="menu-button"
+        class="h-8 w-8 bg-[#5235EF] rounded-full flex justify-center items-center cursor-pointer  mr-20 md:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="size-5 stroke-[#FFFFFF]">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />
+        </svg>
+      </button>
+    </div>
+  </header>
+  <!-- Header section end  -->
+
+
+
+  <!-- main content section start  -->
+  <main class="w-full flex flex-col items-center">
+    <!-- Hero Section Start  -->
+    <section id="hero-section" class="w-full flex justify-center">
+      <div class="my-20 min-h-auto px-4 md:px-10 lg:px-10 lg:max-w-[1200px]">
+        <div class="flex flex-col items-center">
+          <div class="mt-2 lg:mt-8">
+            <div class="flex items-center gap-2 w-full bg-white p-1 px-2 rounded-full">
+              <span class="bg-black text-white text-xs font-medium px-2 py-1 rounded-full">New</span>
+              <p class="text-xs lg:text-sm font-medium text-[#2B2B2C] px-2">Revolutionize your design workflow</p>
+            </div>
+          </div>
+
+          <div class="lg:max-w-[800px] px-3">
+            <h1 data-aos="zoom-in" data-aos-delay="1100"
+              class="text-center text-4xl lg:text-7xl font-semibold text-[#101011] mt-6">
+              Bring ideas to life
+              in just a few clicks.
+            </h1>
+            <div class="lg:px-14">
+              <p data-aos="fade-up" data-aos-delay="1500"
+                class="text-center mt-6 font-medium text-sm lg:text-lg text-[#606266]">
+                Design, prototype,
+                and collaborate in
+                real-time—all in one powerful platform.
+                Elevate your
+                <span class="text-[#2B2B2C]">creative process</span> with
+                <span class="text-[#2B2B2C]">seamless teamwork</span> and limitless possibilities.
+              </p>
+            </div>
+            <!-- section button  -->
+            <div data-aos="fade-up" data-aos-delay="1800" class="w-full flex justify-center">
+              <div class="mt-8 h-10 lg:h-12 lg:w-60 w-50 bg-[linear-gradient(180deg,rgb(82,53,239)_0%,rgb(135,113,255)_100%)] 
+                       rounded-full flex items-center group">
+
+                <button class="relative text-white w-full h-full rounded-full">
+
+                  <!-- First text -->
+                  <span class="text-sm lg:text-base font-medium lg:font-bold absolute inset-0 flex items-center justify-center
+                        transition-all duration-300 group-hover:-translate-y-5 group-hover:opacity-0">
+                    Get Started it's free
+                  </span>
+
+                  <!-- Second text -->
+                  <span class="text-base font-bold absolute inset-0 flex items-center justify-center
+                        translate-y-5 opacity-0 transition-all duration-300
+                        group-hover:translate-y-0 group-hover:opacity-100">
+                    Get Started it's free
+                  </span>
+                </button>
+
+                <!-- Arrow Button -->
+                <button
+                  class="h-7 w-7 mr-2 lg:h-8 lg:w-8 lg:mr-3 bg-white rounded-full flex justify-center items-center relative overflow-hidden shrink-0">
+
+                  <!-- First SVG -->
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-4 stroke-2 transition-all duration-300 group-hover:opacity-0">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                  </svg>
+
+                  <!-- Second SVG -->
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-4 stroke-2 absolute -left-1.5 -translate-x-5 opacity-0
+                           transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                  </svg>
+
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex flex-col md:flex-row gap-8 mt-14">
+            <div data-aos="fade-up-right" class="rounded-2xl shadow-2xl overflow-hidden">
+              <img class="h-full object-cover object-left lg:h-[500px]"
+                src="https://framerusercontent.com/images/lMSZKDPhVBBllLKnGtf5WALEkoU.png?scale-down-to=1024&width=1600&height=995"
+                alt="image">
+            </div>
+
+            <div data-aos="fade-up-left" class="rounded-2xl shadow-2xl overflow-hidden">
+              <img class="lg:h-[500px]"
+                src="https://framerusercontent.com/images/3ZbX0pAmwG1pNcXk5oRa5jN1I.png?width=800&height=1103"
+                alt="image">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Hero Section End  -->
+
+
+    <!-- sponsor section start -->
+    <section>
+      <div class="w-full max-w-xs md:max-w-2xl lg:max-w-5xl mx-auto px-4 md:px-6 py-8 lg:py-14">
+        <div class="text-center">
+
+          <!-- Logo Carousel animation -->
+          <div x-data="{}" x-init="$nextTick(() => {
+                              let ul = $refs.logos;
+                              ul.insertAdjacentHTML('afterend', ul.outerHTML);
+                              ul.nextSibling.setAttribute('aria-hidden', 'true');
+                          })"
+            class="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
+            <ul x-ref="logos"
+              class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
+              <li>
+                <div>
+                  <img src="https://framerusercontent.com/images/8Cv9xasPycS59rovKfmcfBFsiZo.svg?width=111&height=37"
+                    alt="image">
+                </div>
+              </li>
+
+              <li>
+                <div>
+                  <img src="https://framerusercontent.com/images/7aIzRlMAo7aKEM8u0k2IGflPk0.svg?width=137&height=31"
+                    alt="image">
+                </div>
+              </li>
+
+              <li>
+                <div>
+                  <img src="https://framerusercontent.com/images/d4hg31biMljU4aH2RDnh6wWqDfM.svg?width=87&height=24"
+                    alt="image">
+                </div>
+              </li>
+
+              <li>
+                <div>
+                  <img src="https://framerusercontent.com/images/YYV5QoPK9M9NhyUxptVvm0o7WFM.svg" alt="image">
+                </div>
+              </li>
+
+              <li>
+                <div>
+                  <img src="https://framerusercontent.com/images/LBtvbbMscujp7wOLmEoI7hneo.svg?width=103&height=45"
+                    alt="image">
+                </div>
+              </li>
+
+              <li>
+                <div>
+                  <img src="https://framerusercontent.com/images/bbXsJC7bsFfQZR7qsy0AXJDR2c.svg?width=150&height=37"
+                    alt="image">
+                </div>
+              </li>
+
+              <li>
+                <div>
+                  <img src="https://framerusercontent.com/images/IUvmt1THxXd3PXbz5CaMuhEuI6Q.svg?width=130&height=27"
+                    alt="image">
+                </div>
+              </li>
+
+              <li>
+                <div>
+                  <img src="https://framerusercontent.com/images/Jxv0OqRRv25KUWBoDu2ZlmiSAE.svg?width=149&height=37"
+                    alt="image">
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- End: Logo Carousel animation -->
+
+        </div>
+
+      </div>
+    </section>
+    <!-- sponsor section end -->
+
+
+    <!-- Toolkit section start  -->
+    <section class="px-4 my-20 lg:max-w-[1200px]">
+      <div class="flex flex-col items-center">
+        <div class="text-center mt-6 md:max-w-xl">
+          <h1 data-aos="fade-right" class="text-3xl lg:text-5xl font-bold text-[#101011] mb-4">The ultimate toolkit for
+            designers & teams</h1>
+          <p data-aos="fade-left" class="text-base lg:text-lg text-[#606266] font-semibold">Everything you need to
+            create, prototype, and
+            collaborate—all
+            in a single, easy-to-use platform.</p>
+        </div>
+
+        <!-- cards section start  -->
+        <div
+          class="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 grid-rows-3 md:grid-rows-2 lg:grid-rows-1 gap-8">
+          <div data-aos="flip-left" class="h-auto rounded-3xl bg-white shadow-2xs p-2">
+            <div>
+              <img class="rounded-2xl w-full min-h-64 object-center  object-cover"
+                src="https://framerusercontent.com/images/YXLdqRrdQ3LpA0PPNhtbF5Rfsk.png?width=700&height=553"
+                alt="image">
+            </div>
+
+            <div class="px-3 py-4">
+              <h1 class="text-lg lg:text-xl text-[#101011] font-semibold">Intuitive drag & drop editor</h1>
+              <p class="text-sm lg:text-lg text-[#606266] font-medium mt-2">Create stunning designs effortlessly with a
+                user-friendly
+                interface.</p>
+            </div>
+          </div>
+
+          <div data-aos="zoom-in" class="h-auto rounded-3xl bg-white shadow-2xs p-2">
+            <div>
+              <img class="rounded-2xl w-full min-h-64 object-center  object-cover"
+                src="https://framerusercontent.com/images/dkGE24Md1SbG1Y2bJVQBdWl1dns.png" alt="image">
+            </div>
+
+            <div class="px-3 py-4">
+              <h1 class="text-lg lg:text-xl text-[#101011] font-semibold">Advanced prototyping</h1>
+              <p class="text-sm lg:text-lg text-[#606266] font-medium mt-2">Turn ideas into interactive prototypes
+                without writing
+                a single line of code.</p>
+            </div>
+          </div>
+
+          <div data-aos="zoom-in" class="h-auto md:col-span-2 rounded-3xl bg-white shadow-2xs p-2">
+            <div>
+              <img class="rounded-2xl w-full max-h-72 lg:max-h-[450px] object-center  object-cover"
+                src="https://framerusercontent.com/images/1d3VmmKfMjOwv8Gx0fb354Y80Q.jpg?scale-down-to=512" alt="image">
+            </div>
+
+            <div class="px-3 py-4">
+              <h1 class="text-lg lg:text-xl text-[#101011] font-semibold">Real-time collaboration</h1>
+              <p class="text-sm lg:text-lg text-[#606266] font-medium mt-2">Work seamlessly with your team, get instant
+                feedback.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- cards section end  -->
+      </div>
+    </section>
+    <!-- Toolkit section end  -->
+
+    <!-- workflow section start  -->
+    <section class="my-20">
+      <div class="px-4 flex flex-col lg:flex-row gap-16 lg:max-w-[1200px] lg:mt-14">
+        <div>
+          <h1 class="text-2xl md:text-4xl lg:text-5xl font-semibold text-[#101011]">Simplify your workflow</h1>
+          <div class="flex flex-col gap-8 mt-5 lg:mt-9 md:mt-8">
+            <div data-aos="fade-right" class="flex gap-4">
+              <div
+                class="bg-[#F0F2F6] px-3 h-10 flex justify-center items-center text-sm font-semibold text-[#2B2B2C] rounded-md">
+                <p>01</p>
+              </div>
+              <div>
+                <h3 class="text-lg md:text-xl font-semibold text-[#101011]">Start your project</h3>
+                <p class="text-sm md:text-base text-[#606266] font-semibold mt-2">Create a new design or import files
+                  with just a
+                  click. Set
+                  up your workspace effortlessly.</p>
+              </div>
+            </div>
+
+            <div data-aos="fade-right" data-aos-delay="100" class="flex gap-4">
+              <div
+                class="bg-[#F0F2F6] px-3 h-10 flex justify-center items-center text-sm font-semibold text-[#2B2B2C] rounded-md">
+                <p>02</p>
+              </div>
+              <div>
+                <h3 class="text-lg md:text-xl font-semibold text-[#101011]">Design with ease</h3>
+                <p class="text-sm md:text-base text-[#606266] font-semibold mt-2">Use our intuitive drag-and-drop
+                  editor, smart tools stunning designs.</p>
+              </div>
+            </div>
+
+            <div data-aos="fade-right" data-aos-delay="200" class="flex gap-4">
+              <div
+                class="bg-[#F0F2F6] px-3 h-10 flex justify-center items-center text-sm font-semibold text-[#2B2B2C] rounded-md">
+                <p>03</p>
+              </div>
+              <div>
+                <h3 class="text-lg md:text-xl font-semibold text-[#101011]">Export & Share</h3>
+                <p class="text-sm md:text-base text-[#606266] font-semibold mt-2">Easily integrate with your favorite
+                  tools to launch your project effortlessly.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+        <div data-aos="zoom-in"
+          class="bg-[#F0F2F6] p-4 md:px-28 md:pt-12 md:pb-8 rounded-2xl shadow-2xs lg:max-w-[550px] lg:px-12">
+          <div>
+            <img class="rounded-xl"
+              src="https://framerusercontent.com/images/ilnxb8JlQSPXcjRWoZTNLGSFBk.png?width=1071&height=920"
+              alt="image">
+          </div>
+
+          <div class="flex gap-2 mt-4">
+            <p class="text-sm text-[#606266]">Sync your work with a tools:</p>
+            <img class="h-4 w-4 object-cover object-center"
+              src="https://framerusercontent.com/images/68PepmYmSNtrSur8DB5r1OZwaCI.svg?width=20&height=20" alt="image">
+            <img class="h-4 w-4 object-cover object-center"
+              src="https://framerusercontent.com/images/u75E0tmiHFQ0zqzu3xIFartvPaM.svg?width=21&height=20" alt="image">
+            <img class="h-4 w-4 object-cover object-center"
+              src="https://framerusercontent.com/images/PgFI6YIsq49D0a9jsKHXWIPdo8.svg?width=21&height=20" alt="image">
+            <img class="h-4 w-4 object-cover object-center"
+              src="https://framerusercontent.com/images/T5wXgUhyCgXfUuN4OByu2HXOebg.svg?width=21&height=20" alt="image">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- workflow section end -->
+
+
+    <!-- platform section start  -->
+    <section class="px-4 my-20">
+      <div class="md:flex md:gap-16 md:items-center lg:max-w-[1200px]">
+        <div data-aos="zoom-in"
+          class="bg-[#f0f2f6] p-4 rounded-2xl flex flex-col items-center md:max-w-[420px] lg:max-w-[650px] w-full">
+          <div class="flex flex-wrap justify-center gap-4 lg:pt-12">
+            <img src="https://framerusercontent.com/images/VBINO0uPEBBtdnw2H556ai5y8.svg?width=65&height=63"
+              alt="image">
+            <img src="https://framerusercontent.com/images/ammBtYeCqDQpQX01AIdTTAJIX0s.svg?width=63&height=63"
+              alt="image">
+            <img src="https://framerusercontent.com/images/ev7o2fuywuHbshQIcSZ4Gj0vJs8.svg?width=64&height=63"
+              alt="image">
+            <img src="https://framerusercontent.com/images/RdY39UphF55oveWjwUW7nUVG0A.svg?width=63&height=63"
+              alt="image">
+            <img src="https://framerusercontent.com/images/qOnYNwclE4tZchSq2SGRZNe99A.svg?width=64&height=63"
+              alt="image">
+            <img src="https://framerusercontent.com/images/tApNdViJOVngDYaNMdpLNMWrE.svg?width=64&height=63"
+              alt="image">
+            <img src="https://framerusercontent.com/images/G2Zgz5YhqI9hCVQM2ZbkVjTyDc.svg?width=62&height=64"
+              alt="image">
+            <img src="https://framerusercontent.com/images/DbetTKBspAjyP9DPnteU3FLeaHQ.svg?width=64&height=64"
+              alt="image">
+            <img src="https://framerusercontent.com/images/J9T0namOEUFiwlJTW6EUHNumrCc.svg?width=64&height=64"
+              alt="image">
+            <img src="https://framerusercontent.com/images/0JqVCpsaxPlWJzUpjsMFieQYsg.svg?width=63&height=64"
+              alt="image">
+          </div>
+          <div>
+            <img class="md:msx-w-[340px] w-full" src="assets/svg.png" alt="image">
+          </div>
+          <div>
+            <img src="https://framerusercontent.com/images/zihHvrScDvGkIjPol8V3xIlAkkE.svg?width=100&height=100"
+              alt="image">
+          </div>
+        </div>
+        <div class="py-14">
+          <div>
+            <h1 data-aos="fade-left" data-aos-delay="100"
+              class="text-3xl md:text-4xl text-[#101011] tracking-tight font-semibold mb-8">One platform, unlimited
+              integrations
+            </h1>
+            <button data-aos="fade-left" data-aos-delay="200"
+              class="relative h-10 md:h-12 w-48 bg-black text-white rounded-full group mb-8 shadow-2xs">
+
+              <!-- First text (default visible) -->
+              <span class="text-sm md:text-base font-medium absolute inset-0 flex items-center justify-center
+                      transition-all duration-300 group-hover:-translate-y-5 group-hover:opacity-0">
+                View all integrations
+              </span>
+
+              <!-- Second text (hidden, comes from bottom on hover) -->
+              <span class="text-sm md:text-base font-medium absolute inset-0 flex items-center justify-center
+                      translate-y-5 opacity-0 transition-all duration-300
+                      group-hover:translate-y-0 group-hover:opacity-100">
+                View all integrations
+              </span>
+
+            </button>
+            <p data-aos="fade-left" data-aos-delay="300" class="text-sm md:text-base text-[#2B2B2C] font-medium">“Our
+              platform empowers teams to collaborate,
+              innovate, and
+              bring ideas to life—seamlessly and
+              effortlessly.”</p>
+            <div data-aos="fade-left" data-aos-delay="400" class="flex gap-4 items-center mt-4">
+              <img class="h-8 w-8 object-cover object-center rounded-full"
+                src="https://framerusercontent.com/images/UQK9nK25dDlqFXJ6Cb5LrZik.jpg?scale-down-to=512" alt="image">
+              <p class="text-xs md:text-sm text-[#101011] font-medium">Daniel Vaughn, Founder & CEO</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- platform section end -->
+
+
+    <!-- workflow with next gen section start  -->
+    <section class="px-4 my-20">
+      <div class="px-4 pt-14 pb-12 bg-[#101011] rounded-3xl flex flex-col items-center gap-8 xl:px-60">
+        <div>
+          <h1 data-aos="fade-up"
+            class="text-white font-bold text-center text-2xl md:text-4xl lg:text-5xl lg:mb-12 lg:w-2xl">Power up your
+            workflow
+            with next-gen
+            features.</h1>
+        </div>
+
+        <div class="flex flex-col md:flex-row lg:justify-center items-center gap-8 rounded-2xl">
+          <!-- section card  -->
+          <div class="bg-[#2B2B2C] p-2 rounded-2xl lg:max-w-xl">
+            <div class="bg-black rounded-xl flex flex-col items-center h-[280px] md:h-[300px] overflow-hidden">
+              <img class="h-36"
+                src="https://framerusercontent.com/images/dBBfzjGk2BtPPKjZRobmTlVSq4.svg?width=185&height=180"
+                alt="image">
+              <img src="https://framerusercontent.com/images/ShfYdcEM6232YLKm9wra8NPoIA.png?width=618&height=174"
+                alt="image">
+            </div>
+            <div class="p-4">
+              <h2 class="text-lg lg:text-xl font-bold text-white">Cloud-based accessibility</h2>
+              <p class="text-base lg:text-lg text-[#A7A7A7] font-medium mt-2">Access your projects anytime, anywhere—no
+                downloads
+                or
+                installations needed.</p>
+            </div>
+          </div>
+
+          <!-- section card  -->
+          <div class="bg-[#2B2B2C] p-2 rounded-2xl lg:max-w-xl">
+            <div class="bg-black rounded-xl flex justify-around items-center h-[280px] md:h-[300px]">
+              <img class="h-32"
+                src="https://framerusercontent.com/images/6W02ncJAwEXl60GOBTttPIPb8.svg?width=110&height=170"
+                alt="image">
+              <img class="h-32"
+                src="https://framerusercontent.com/images/O3HEesRvxGJ99Z7m4PLbc2EatvI.svg?width=161&height=170"
+                alt="image">
+            </div>
+            <div class="p-4">
+              <h2 class="text-lg lg:text-xl font-bold text-white">Fast & secure performance</h2>
+              <p class="text-base lg:text-lg text-[#A7A7A7] font-medium mt-2">Experience lightning-fast speed with
+                enterprise-level
+                security and version control.</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="w-full flex flex-col lg:flex-row md:justify-start lg:justify-center lg:max-w-[1200px] gap-8 lg:gap-16 lg:mt-12">
+          <!-- sub section card  -->
+          <div class="flex flex-col md:flex-row lg:flex-col gap-4 md:gap-8">
+            <div>
+              <div class="h-16 w-16 rounded-xl bg-[#2B2B2C] flex justify-center  items-center">
+                <img class="w-8 h-8 object-cover"
+                  src="https://framerusercontent.com/images/l42PBTIUav2V302HEVgYzlS5jJU.svg" alt="image">
+              </div>
+            </div>
+            <div data-aos="fade-up">
+              <h2 class="text-base lg:text-xl font-bold text-white">Effortless design experience</h2>
+              <p class="text-sm lg:text-base text-[#A7A7A7] font-medium mt-2">Intuitive interface and smart tools to
+                speed up
+                your creative process.</p>
+            </div>
+          </div>
+
+          <!-- sub section card  -->
+          <div class="flex flex-col md:flex-row lg:flex-col gap-4 md:gap-8">
+            <div>
+              <div class="h-16 w-16 rounded-xl bg-[#2B2B2C] flex justify-center  items-center">
+                <img class="w-8 h-8 object-cover"
+                  src="https://framerusercontent.com/images/sy5ROC9x6CLiXyLV5LpuEUJheo.svg?width=22&height=22"
+                  alt="image">
+              </div>
+            </div>
+            <div data-aos="fade-up">
+              <h2 class="text-base lg:text-xl font-bold text-white">Hassle-free prototyping</h2>
+              <p class="text-sm lg:text-base text-[#A7A7A7] font-medium mt-2">Transform static designs into interactive
+                prototypes
+                in just a few clicks.</p>
+            </div>
+          </div>
+
+          <!-- sub section card  -->
+          <div class="flex flex-col md:flex-row lg:flex-col gap-4 md:gap-8">
+            <div>
+              <div class="h-16 w-16 rounded-xl bg-[#2B2B2C] flex justify-center  items-center">
+                <img class="w-8 h-8 object-cover"
+                  src="https://framerusercontent.com/images/MX5HZSkOdkquLFzfFSVVE1ZmlJw.svg?width=22&height=22"
+                  alt="image">
+              </div>
+            </div>
+            <div data-aos="fade-up">
+              <h2 class="text-base lg:text-xl font-bold text-white">One-click export & handoff</h2>
+              <p class="text-sm lg:text-base text-[#A7A7A7] font-medium mt-2">Generate code, export assets, and
+                collaborate with
+                developers effortlessly.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- workflow with next gen section start  -->
+
+    <!-- Priceing plan section start  -->
+    <section class="my-20">
+      <div class="px-4 lg:max-w-[1200px]">
+        <div class="text-center">
+          <h1 data-aos="zoom-in" class="text-2xl md:text-4xl lg:text-5xl text-[#101011] font-bold mb-4">Flexible pricing
+            plans</h1>
+          <p class="text-sm md:text-base lg:text-lg text-[#606266] font-medium">Choose a plan that grows with you. Start
+            for free and upgrade
+            anytime for more features and support</p>
+        </div>
+        <div class="mt-8">
+          <div class="flex items-center justify-center gap-4">
+            <span class="text-sm md:text-base lg:text-lg font-medium text-[#101011]">Monthly</span>
+            <!-- toggle button -->
+            <label class="relative inline-flex items-center cursor-pointer">
+              <input type="checkbox" class="sr-only peer" />
+              <div
+                class="group peer rounded-full duration-300 w-14 h-6 ring-2 ring-gray-300 after:duration-300 after:bg-gray-300 peer-checked:bg-blue-500 peer-checked:after:bg-white peer-checked:ring-blue-500 after:rounded-full after:absolute after:h-4 after:w-4 after:top-1 after:left-1 after:flex after:justify-center after:items-center peer-checked:after:translate-x-4 peer-hover:after:scale-95">
+              </div>
+            </label>
+            <p>
+              <span class="text-sm md:text-base lg:text-lg font-medium text-[#101011]">Yearly</span>
+              <span class="text-sm md:text-base lg:text-lg font-medium text-violet-700">20% off</span>
+            </p>
+          </div>
+
+          <!-- cards container -->
+          <div class="mt-8 grid grid-rows-3 md:grid-rows-2 md:grid-cols-2 lg:grid-cols-3 lg:grid-rows-1 gap-8">
+            <!-- card  -->
+            <div data-aos="fade-up" class="bg-[#F0F2F6] md:col-span-2 lg:col-span-1 rounded-4xl px-2 pt-2 pb-8">
+
+              <div class="bg-white rounded-3xl p-3">
+                <div class="flex justify-between items-center gap-12">
+                  <div class="lg:max-w-xs lg:w-full">
+                    <h3 class="text-lg md:text-xl text-[#101011] font-bold">Starter plan</h3>
+                    <p class="text-sm md:text-base lg:text-lg text-[#606266] font-medium mt-2">For individuals & new
+                      creators</p>
+                  </div>
+                  <div class="flex items-end">
+                    <h1 class="text-2xl lg:text-5xl text-[#101011] font-bold">$19</h1>
+                    <span class="text-base text-[#606266] font-medium">/month</span>
+                  </div>
+                </div>
+
+                <button class="relative  h-10 lg:h-12 w-full bg-black text-white rounded-full group mt-10">
+                  <!-- First text (default visible) -->
+                  <span class="text-sm font-medium absolute inset-0 flex items-center justify-center
+                          transition-all duration-300 group-hover:-translate-y-5 group-hover:opacity-0">
+                    Get Started
+                  </span>
+                  <!-- Second text (hidden, comes from bottom on hover) -->
+                  <span class="text-sm font-medium absolute inset-0 flex items-center justify-center
+                          translate-y-5 opacity-0 transition-all duration-300
+                          group-hover:translate-y-0 group-hover:opacity-100">
+                    Get Started
+                  </span>
+                </button>
+              </div>
+
+              <div class="p-4">
+                <p class="text-sm text-[#606266] font-medium mb-2">Included features:</p>
+                <ul class="list-disc list-inside">
+                  <li class="text-base font-medium text-[#2B2B2C] mb-1">1 active project</li>
+                  <li class="text-base font-medium text-[#2B2B2C] mb-1">Basic collaboration tools</li>
+                  <li class="text-base font-medium text-[#2B2B2C] mb-1">Limited prototyping options</li>
+                  <li class="text-base font-medium text-[#2B2B2C] mb-1">500MB cloud storage</li>
+                  <li class="text-base font-medium text-[#606266] line-through mb-1 ">Seamless third-party integrations
+                  </li>
+                  <li class="text-base font-medium text-[#606266] line-through mb-1">Community support</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- card  -->
+            <div data-aos="fade-up" data-aos-delay="200" class="bg-[#F0F2F6] rounded-4xl px-2 pt-2 pb-8">
+
+              <div class="bg-white rounded-3xl p-3">
+                <div class="flex justify-between items-center gap-12">
+                  <div class="lg:max-w-xs lg:w-full">
+                    <h3 class="text-lg md:text-xl text-[#101011] font-bold">Pro plan</h3>
+                    <p class="text-sm md:text-base text-[#606266] font-medium mt-2">For freelancers & small teams</p>
+                  </div>
+                  <div class="flex items-end">
+                    <h1 class="text-2xl lg:text-5xl text-[#101011] font-bold">$49</h1>
+                    <span class="text-base text-[#606266] font-medium">/month</span>
+                  </div>
+                </div>
+
+                <button
+                  class="relative  h-10 lg:h-12 w-full bg-black text-white rounded-full group mt-10 bg-[linear-gradient(180deg,rgb(82,53,239)_0%,rgb(135,113,255)_100%)]">
+                  <!-- First text (default visible) -->
+                  <span class="text-sm font-medium absolute inset-0 flex items-center justify-center
+                                      transition-all duration-300 group-hover:-translate-y-5 group-hover:opacity-0">
+                    Get Started
+                  </span>
+                  <!-- Second text (hidden, comes from bottom on hover) -->
+                  <span class="text-sm font-medium absolute inset-0 flex items-center justify-center
+                                      translate-y-5 opacity-0 transition-all duration-300
+                                      group-hover:translate-y-0 group-hover:opacity-100">
+                    Get Started
+                  </span>
+                </button>
+              </div>
+
+              <div class="p-4">
+                <p class="text-sm text-[#606266] font-medium mb-2">Included features:</p>
+                <ul class="list-disc list-inside">
+                  <li class="text-base font-medium text-[#2B2B2C] mb-1">Unlimited projects</li>
+                  <li class="text-base font-medium text-[#2B2B2C] mb-1">Real-time collaboration</li>
+                  <li class="text-base font-medium text-[#2B2B2C] mb-1">Advanced prototyping tools</li>
+                  <li class="text-base font-medium text-[#2B2B2C] mb-1">Cloud storage & version history</li>
+                  <li class="text-base font-medium text-[#2B2B2C] mb-1">Seamless third-party integrations
+                  </li>
+                  <li class="text-base font-medium text-[#606266] mb-1 line-through">Email & chat support</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- card  -->
+            <div data-aos="fade-up" data-aos-delay="300" class="bg-[#F0F2F6] rounded-4xl px-2 pt-2 pb-8">
+
+              <div class="bg-white rounded-3xl p-3">
+                <div class="flex justify-between items-center gap-12">
+                  <div class="lg:max-w-xs lg:w-full">
+                    <h3 class="text-lg md:text-xl text-[#101011] font-bold">Business plan</h3>
+                    <p class="text-sm md:text-base text-[#606266] font-medium mt-2">For growing teams & agencies</p>
+                  </div>
+                  <div class="flex items-end">
+                    <h1 class="text-2xl lg:text-5xl text-[#101011] font-bold">$79</h1>
+                    <span class="text-base text-[#606266] font-medium">/month</span>
+                  </div>
+                </div>
+
+                <button class="relative  h-10 lg:h-12 w-full bg-black text-white rounded-full group mt-10">
+                  <!-- First text (default visible) -->
+                  <span class="text-sm font-medium absolute inset-0 flex items-center justify-center
+                                      transition-all duration-300 group-hover:-translate-y-5 group-hover:opacity-0">
+                    Get Started
+                  </span>
+                  <!-- Second text (hidden, comes from bottom on hover) -->
+                  <span class="text-sm font-medium absolute inset-0 flex items-center justify-center
+                                      translate-y-5 opacity-0 transition-all duration-300
+                                      group-hover:translate-y-0 group-hover:opacity-100">
+                    Get Started
+                  </span>
+                </button>
+              </div>
+
+              <div class="p-4">
+                <p class="text-sm text-[#606266] font-medium mb-2">Included features:</p>
+                <ul class="list-disc list-inside">
+                  <li class="text-base font-medium text-[#2B2B2C] mb-1">Everything in Pro +</li>
+                  <li class="text-base font-medium text-[#2B2B2C] mb-1">Team management & permissions</li>
+                  <li class="text-base font-medium text-[#2B2B2C] mb-1">Enhanced security controls</li>
+                  <li class="text-base font-medium text-[#2B2B2C] mb-1">Priority integrations & API access</li>
+                  <li class="text-base font-medium text-[#2B2B2C] mb-1">Advanced cloud storage
+                  </li>
+                  <li class="text-base font-medium text-[#2B2B2C] mb-1">24/7 priority support</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Priceing plan section end  -->
+
+    <!-- Perfect design solution section start  -->
+    <section class="px-4 my-20">
+      <div
+        class="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-8 lg:gap-16 lg:max-w-[1200px] w-full">
+        <div data-aos="zoom-in"
+          class="bg-[#F0F2F6] md:w-full md:relative md:flex md:justify-center lg:max-w-[520px] rounded-3xl px-4 pt-4 overflow-y-hidden">
+          <img class="-mb-10 md:h-[450px]"
+            src="https://framerusercontent.com/images/d7m2VScguJ8Bzi0pVEKE6QiFs.png?width=601&height=914" alt="image">
+          <img class="hidden md:block md:absolute md:h-40 md:top-1/2 md:right-24 lg:right-10"
+            src="https://framerusercontent.com/images/Hlq968SBkAIwQwdlJBE8jTLn4c.png?width=363&height=290" alt="image">
+        </div>
+
+        <div>
+          <div>
+            <h1 data-aos="fade-left" class="text-2xl md:text-3xl lg:text-5xl text-[#101011] font-bold mb-3 lg:mb-5">The
+              perfect design
+              solution for
+              every
+              workflow</h1>
+            <p data-aos="fade-left" data-aos-delay="200"
+              class="text-sm md:text-base lg:text-lg text-[#2B2B2C] font-medium">Discover how our design platform fits
+              your needs,
+              whether
+              you're a freelancer, startup, or enterprise.
+            </p>
+          </div>
+          <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-2 mt-12">
+            <div data-aos="fade-up" class="mt-4 md:mt-0 flex flex-col gap-2">
+              <div class="flex gap-4 items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="size-4 stroke-violet-700">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                </svg>
+                <p class="text-sm md:text-base lg-text-lg font-medium text-[#2B2B2C]">UI/UX designers</p>
+              </div>
+              <div class="flex gap-4 items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="size-4 stroke-violet-700">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                </svg>
+                <p class="text-sm md:text-base lg-text-lg font-medium text-[#2B2B2C]">Product teams</p>
+              </div>
+              <div class="flex gap-4 items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="size-4 stroke-violet-700">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                </svg>
+                <p class="text-sm md:text-base lg-text-lg font-medium text-[#2B2B2C]">Enterprises Organizations</p>
+              </div>
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="250" class="flex flex-col gap-2">
+              <div class="flex gap-4 items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="size-4 stroke-violet-700">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                </svg>
+                <p class="text-sm md:text-base lg-text-lg font-medium text-[#2B2B2C]">App & Web developers</p>
+              </div>
+              <div class="flex gap-4 items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="size-4 stroke-violet-700">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                </svg>
+                <p class="text-sm md:text-base lg-text-lg font-medium text-[#2B2B2C]">Marketing teams</p>
+              </div>
+              <div class="flex gap-4 items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="size-4 stroke-violet-700">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                </svg>
+                <p class="text-sm md:text-base lg-text-lg font-medium text-[#2B2B2C]">Agencies & Enterprises</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Perfect design solution section end -->
+
+    <!-- creative workflow section start  -->
+    <section id="creative" class="px-4 w-full mt-20 flex justify-center">
+      <div class="lg:max-w-[1200px]">
+        <div class="flex flex-col justify-center items-center gap-6">
+          <div class="w-full lg:max-w-xl flex flex-col gap-6">
+            <h1 data-aos="zoom-in" class="text-2xl md:text-center md:text-3xl lg:text-5xl text-[#101011] font-bold">Take
+              your
+              creative
+              workflow
+              to the next level</h1>
+            <p data-aos="fade-right" class="text-sm md:text-center md:text-base lg:text-lg text-[#2B2B2C] font-medium">
+              Supercharge
+              your workflow
+              with powerful
+              design tools and effortless collaboration—perfect for freelancers
+              and teams.</p>
+          </div>
+
+          <div class="w-full flex justify-center items-center gap-8">
+            <button
+              class="relative h-8 md:h-10 w-28 md:w-32 bg-[linear-gradient(180deg,rgb(82,53,239)_0%,rgb(135,113,255)_100%)] text-white rounded-full group">
+              <!-- First text (default visible) -->
+              <span class="text-sm font-medium absolute inset-0 flex items-center justify-center
+                      transition-all duration-300 group-hover:-translate-y-5 group-hover:opacity-0">
+                Get Started
+              </span>
+
+              <!-- Second text (hidden, comes from bottom on hover) -->
+              <span class="text-sm font-medium absolute inset-0 flex items-center justify-center
+                      translate-y-5 opacity-0 transition-all duration-300
+                      group-hover:translate-y-0 group-hover:opacity-100">
+                Get Started
+              </span>
+            </button>
+
+            <a href="#">
+              <div class="h-8 w-8 bg-white rounded-full flex justify-center items-center">
+                <img src="https://framerusercontent.com/images/uU2Zp13wFQUv9qyoOmfMWoDCR8.svg" alt="image">
+              </div>
+            </a>
+            <a href="#">
+              <div class="h-8 w-8 bg-white rounded-full flex justify-center items-center">
+                <img src="https://framerusercontent.com/images/sHQWKBlcdxgoBk75IhH8eY9bWVY.svg?width=20&height=20"
+                  alt="image">
+              </div>
+            </a>
+          </div>
+        </div>
+        <div data-aos="zoom-in" class="mt-10  lg:mt-20 overflow-hidden rounded-tl-2xl rounded-tr-2xl">
+          <img class="w-full"
+            src="https://framerusercontent.com/images/3uvceqytCHwJDIfhFyK75EuwCys.png?width=3840&height=2223"
+            alt="image">
+        </div>
+      </div>
+    </section>
+    <!-- creative workflow section start  -->
+  </main>
+  <!-- main content section end  -->
+
+
+  <!-- fotter section start  -->
+  <footer class="bg-[#101011] flex justify-center">
+    <div class="px-4 pt-28 w-full lg:max-w-[1200px]">
+      <div class="flex flex-col md:flex-row md:justify-between">
+        <div class="flex flex-col justify-between">
+          <div>
+            <img src="https://framerusercontent.com/images/eDQ7HIqAK4kdYZ3DQ5CyZeQqhV0.svg?width=122&height=40"
+              alt="image">
+          </div>
+          <div class="mt-10 md:mt-0">
+            <p class="text-[#A7A7A7] font-medium text-sm mb-4">Follow us on:</p>
+            <div class="flex gap-4">
+              <a href="#"><i
+                  class="fa-brands fa-facebook-f text-[#FFFFFF] text-lg transition-colors hover:text-[#A7A7A7]"></i></a>
+              <a href="#"><i
+                  class="fa-brands fa-x-twitter text-[#FFFFFF] text-lg transition-colors hover:text-[#A7A7A7]"></i></a>
+              <a href="#"><i
+                  class="fa-brands fa-instagram text-[#FFFFFF] text-lg transition-colors hover:text-[#A7A7A7]"></i></a>
+              <a href="#"><i
+                  class="fa-brands fa-linkedin-in text-[#FFFFFF] text-lg transition-colors hover:text-[#A7A7A7]"></i></a>
+              <a href="#"><i
+                  class="fa-brands fa-youtube text-[#FFFFFF] text-lg transition-colors hover:text-[#A7A7A7]"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex gap-x-32 mt-10 md:mt-0">
+          <div>
+            <h1 class="text-white text-lg md:text-2xl font-semibold mb-4">Quick Links</h1>
+            <ul class="flex flex-col gap-2">
+              <li>
+                <a href="#" class="text-[#A7A7A7] font-medium text-base transition-colors hover:text-white">Home</a>
+              </li>
+              <li>
+                <a href="#" class="text-[#A7A7A7] font-medium text-base transition-colors hover:text-white">Features</a>
+              </li>
+              <li>
+                <a href="#" class="text-[#A7A7A7] font-medium text-base transition-colors hover:text-white">Pricing</a>
+              </li>
+              <li>
+                <a href="#" class="text-[#A7A7A7] font-medium text-base transition-colors hover:text-white">Download</a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h1 class="text-white text-lg md:text-2xl font-semibold mb-4">All Pages</h1>
+            <ul class="flex flex-col gap-2">
+              <li>
+                <a href="#" class="text-[#A7A7A7] font-medium text-base transition-colors hover:text-white">About us</a>
+              </li>
+              <li>
+                <a href="#" class="text-[#A7A7A7] font-medium text-base transition-colors hover:text-white">Contact
+                  us</a>
+              </li>
+              <li>
+                <a href="#" class="text-[#A7A7A7] font-medium text-base transition-colors hover:text-white">Blog</a>
+              </li>
+              <li>
+                <a href="#" class="text-[#A7A7A7] font-medium text-base transition-colors hover:text-white">Waitlist</a>
+              </li>
+              <li>
+                <a href="#" class="text-[#A7A7A7] font-medium text-base transition-colors hover:text-white">Privacy
+                  Policy</a>
+              </li>
+              <li>
+                <a href="#" class="text-[#A7A7A7] font-medium text-base transition-colors hover:text-white">404</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="py-12 mt-8 flex justify-center border-t border-gray-500">
+        <p class="text-[#A7A7A7] font-medium text-sm">Designed by <a href="#"
+            class="text-white transition-all hover:underline">Webestica</a>, Powered by <a href="#"
+            class="text-white transition-all hover:underline">Framer</a></p>
+      </div>
+    </div>
+  </footer>
+  <!-- fotter section start  -->
+
+  <script src="scripts/main.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            inter: ['Inter', 'sans-serif'],
+          },
+          animation: {
+            'infinite-scroll': 'infinite-scroll 25s linear infinite',
+          },
+          keyframes: {
+            'infinite-scroll': {
+              from: { transform: 'translateX(0)' },
+              to: { transform: 'translateX(-100%)' },
+            }
+          }
+        },
+      },
+    };
+  </script>
+</body>
+
+</html>

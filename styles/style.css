@@ -1,0 +1,63 @@
+@import "tailwindcss";
+/* Impoting Google Inter Font  */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+* {
+  font-family: "Inter", sans-serif;
+}
+
+/* Hidden state */
+header {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+header.hide {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+#hero-section {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 10%,
+    rgba(238, 233, 255, 1) 30%,
+    rgba(225, 213, 255, 1) 55%,
+    rgba(238, 233, 255, 1) 75%,
+    rgba(255, 255, 255, 1) 90%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+#creative {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 12%,
+    rgba(245, 240, 255, 1) 22%,
+    rgba(230, 217, 255, 1) 55%,
+    rgba(228, 215, 255, 1) 78%,
+    rgba(225, 213, 255, 1) 90%,
+    rgba(222, 210, 255, 1) 100%
+  );
+}
+.branch {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3.8;
+  filter: none;
+}
+.branch-inner {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.4;
+  opacity: 0.55;
+}
+.draw {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+.dot {
+  r: 3.6;
+  fill: #7a5bff;
+  filter: url(#glow);
+  opacity: 0.95;
+}
