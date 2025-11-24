@@ -43,25 +43,6 @@ AOS.init({
   duration: 1000, // 1.2 seconds
 });
 
-// User scrolling speed control logic
-let targetScroll = 0; // where the page should scroll
-let currentScroll = 0; // current virtual scroll
-
-// Listen to wheel scroll
-window.addEventListener(
-  "wheel",
-  (e) => {
-    e.preventDefault(); // prevent default scroll
-    targetScroll += e.deltaY; // accumulate scroll
-    // limit scroll to page height
-    targetScroll = Math.max(
-      0,
-      Math.min(targetScroll, document.body.scrollHeight - window.innerHeight)
-    );
-  },
-  { passive: false }
-);
-
 // Smoothly animate scroll
 function smoothScroll() {
   currentScroll += (targetScroll - currentScroll) * 0.1; // adjust 0.1 for speed
@@ -70,3 +51,4 @@ function smoothScroll() {
 }
 
 smoothScroll();
+
